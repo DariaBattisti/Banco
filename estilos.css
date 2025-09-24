@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fcf9f9;
+  color: #252424;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/*Topbar*/
+.topbar {
+  background: #1f7a3a;
+  color: #f4efef;
+}
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand-logo {
+  height: 32px;
+}
+.brand-name {
+  font-size: 20px;
+}
+.btn {
+  color: #f1eded;
+  text-decoration: none;
+  border: 1px solid #f8f0f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.btn:hover {
+  background: #ffffff20;
+}
+
+/* Navbar*/
+.navbar {
+  background: #dfe4af;
+  border-bottom: 1px solid #cfcbcb;
+  position: relative;
+  z-index: 100;
+}
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu > li {
+  position: relative;
+}
+.menu > li > a {
+  display: block;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: black;
+}
+.menu > li > a:hover {
+  background: #ebe6e6;
+  color: #247f3f;
+}
+
+/*Submenus*/
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: #f0ecec;
+  border: 1px solid #d1d1d1;
+  display: none;
+  z-index: 1000;
+}
+.submenu li a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #1c1b1b;
+  font-size: 14px;
+}
+.submenu li a:hover {
+  background: #f6f6f6;
+  color: #1f7a3a;
+}
+.menu li:hover > .submenu {
+  display: block;
+}
+
+/* Carrusel*/
+.carousel {
+  background: #eef7f0;
+  padding: 20px 0;
+}
+.slider {
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+.slider-track {
+  display: flex;
+  width: 400%;
+  animation: slide 16s infinite;
+}
+.slide {
+  width: 100%;
+  position: relative;
+}
+.slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.slide figcaption {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  background: rgba(10, 10, 10, 0.6);
+  color: #f1efef;
+  padding: 8px;
+  font-size: 15px;
+}
+.slide h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.slide p {
+  font-size: 12px;
+}
+
+@keyframes slide {
+  0%,20% { transform: translateX(0%); }
+  25%,45% { transform: translateX(-25%); }
+  50%,70% { transform: translateX(-50%); }
+  75%,95% { transform: translateX(-75%); }
+  100% { transform: translateX(0%); }
+}
+
+/*Secciones*/
+.section {
+  padding: 20px 0;
+  text-align: center;
+}
+.about {
+  background: #d0dfd3;
+  padding: 20px 0;
+}
+.about p {
+  line-height: 1.4;
+}
+
+/* secciones */
+.section {
+  padding: 150px 0;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #1f7a3a;
+}
+
+.section p {
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/*Footer*/
+footer {
+  text-align: center;
+  padding: 14px;
+  background: #5f8659;
+  color:white;
+  font-size: 14px;
+}
